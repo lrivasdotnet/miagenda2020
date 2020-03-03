@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="net.lrivas.miagenda.ModificarContacto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Modificar Contacto"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nombre Completo:"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNombreCompletoEditar"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:hint="Nombre del Contacto" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Número de Teléfono:"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/txtNombreCompletoEditar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/txtTelefonoEditar"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:hint="0000-0000" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modificar Contacto"
+        android:id="@+id/btnGuardarContactoEditar"
+        android:layout_below="@+id/txtTelefonoEditar"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:id="@+id/btnEliminarEditar"
+        android:layout_below="@+id/btnGuardarContactoEditar"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:id="@+id/btnRegresarEditar"
+        android:layout_below="@+id/btnEliminarEditar"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
