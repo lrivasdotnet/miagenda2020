@@ -22,7 +22,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     ConexionSQLite objConexion;
     final String NOMBRE_BASE_DATOS = "miagenda";
-    Button botonAgregar;
+    Button botonAgregar, botonBuscar;
     ListView listaContactos;
     ArrayList<String> lista;
     ArrayAdapter adaptador;
@@ -58,6 +58,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent ventanaModificar = new Intent(MainActivity.this, ModificarContacto.class);
                 ventanaModificar.putExtra("id_contacto", idSeleccionado);
                 startActivity(ventanaModificar);
+            }
+        });
+
+        botonBuscar = findViewById(R.id.btnBuscar);
+        botonBuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lista = llenarLista();
+                adaptador = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1,lista);
+                listaContactos.setAdapter(adaptador);
             }
         });
     }
