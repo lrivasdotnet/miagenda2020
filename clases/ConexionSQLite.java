@@ -14,9 +14,7 @@ public class ConexionSQLite extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
-        db.execSQL(TABLA_CONTACTOS);
-        db.execSQL(TABLA_IMAGENES);
+        db.execSQL(TABLA_CONTACTOS);        
     }
 
     @Override
